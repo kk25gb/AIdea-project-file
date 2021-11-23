@@ -29,11 +29,11 @@ def find_pattern(input,list):
 
 
 for key , value in data.items():
-    temp = {}
+    temp = []
     # print(value)
-    temp['chem']=find_pattern(value,chem_list)
-    temp['crop']=find_pattern(value,crop_list)
-    temp['pest']=find_pattern(value,pest_list)
+    temp+=find_pattern(value,chem_list)
+    temp+=find_pattern(value,crop_list)
+    temp+=find_pattern(value,pest_list)
     results[key]=temp
 
 with open('./vectorize_data.json', 'w', encoding='utf8') as f:
