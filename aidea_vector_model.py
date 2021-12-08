@@ -59,7 +59,7 @@ for q in df.iloc[condition_d, :].index:
         sum_d = [df.loc[d, class1_column].values.sum(), df.loc[d, class2_column].values.sum(), df.loc[d, class3_column].values.sum()]
         score_d = score_df.loc[d, columns].values
         if sum(sum_d) != 0:
-            score = cosine_similarity([score_q], [score_d])      # score:0.3708961
+            score = cosine_similarity([score_q], [score_d])      # score:0.4435233
             # score = distance.canberra([score_q], [score_d])    # score:0.0142605
             # score = distance.correlation([score_q], [score_d]) # score:0.0050659
             # score = distance.dice([score_q], [score_d])        # score:0.0142605
